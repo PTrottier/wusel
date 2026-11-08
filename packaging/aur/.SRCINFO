@@ -1,6 +1,6 @@
 pkgbase = wusel
 	pkgdesc = Virtual Nextcloud filesystem — Nextcloud, woven into your desktop
-	pkgver = 0.2.2
+	pkgver = 0.5.0
 	pkgrel = 1
 	url = https://github.com/itbh-at/wusel
 	arch = x86_64
@@ -11,8 +11,8 @@ pkgbase = wusel
 	makedepends = pkgconf
 	makedepends = nautilus
 	makedepends = gtk4
-	source = wusel-0.2.2.tar.gz::https://github.com/itbh-at/wusel/archive/refs/tags/v0.2.2.tar.gz
-	sha256sums = 3dfb8473be5d08b24cad70e9c435ca9c66f7bad38b88f2afd37d1492c109eac8
+	source = wusel-0.5.0.tar.gz::https://github.com/itbh-at/wusel/archive/refs/tags/v0.5.0.tar.gz
+	sha256sums = 023179646e5388288e4e8769f9c1f91b609727b449ffd002ba48f2a7ef8d1b6e
 
 pkgname = wusel
 	install = wusel.install
