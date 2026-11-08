@@ -2,19 +2,21 @@
 
 pkgbase=wusel
 pkgname=('wusel' 'wusel-nautilus')
-pkgver=0.2.2
+pkgver=0.5.0
 pkgrel=1
 pkgdesc="Virtual Nextcloud filesystem — Nextcloud, woven into your desktop"
 arch=('x86_64' 'aarch64')
 url="https://github.com/itbh-at/wusel"
 license=('Apache-2.0')
+# Enables linking to SQLite functions
+options=('!lto')
 # A split package: `wusel` needs fuse3 and nothing else; the Nautilus extension
 # is `wusel-nautilus`, so its libraries reach only machines that want it.
 # Both are built unconditionally (nautilus and gtk4 are makedepends, for their
 # headers).
 makedepends=('rust' 'git' 'pkgconf' 'nautilus' 'gtk4')
 source=("$pkgbase-$pkgver.tar.gz::https://github.com/itbh-at/wusel/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('3dfb8473be5d08b24cad70e9c435ca9c66f7bad38b88f2afd37d1492c109eac8')
+sha256sums=('023179646e5388288e4e8769f9c1f91b609727b449ffd002ba48f2a7ef8d1b6e')
 
 build() {
   cd "$pkgbase-$pkgver"
